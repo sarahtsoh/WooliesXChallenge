@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
@@ -15,6 +16,7 @@ using WooliesChallenge.Service;
 
 namespace WooliesChallenge.Controllers
 {
+    [EnableCors("CorsPolicy")]
     [ApiController]
     [Route("/api/")]
     public class WooliesController : ControllerBase
