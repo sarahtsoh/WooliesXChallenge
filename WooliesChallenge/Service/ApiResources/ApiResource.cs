@@ -36,7 +36,7 @@ namespace WooliesChallenge.Service.ApiResources
         
         public async Task<List<Product>> GetProducts()
         {
-            var response = await client.GetAsync(@$"api/resource/products?token={token}");
+            var response = await client.GetAsync($@"api/resource/products?token={token}");
             if (response.IsSuccessStatusCode)
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
@@ -53,7 +53,7 @@ namespace WooliesChallenge.Service.ApiResources
         
         public async Task<List<ShopperHistory>> GetProductHistory()
         {
-            var response = await client.GetAsync(@$"api/resource/shopperHistory?token={token}");
+            var response = await client.GetAsync($@"api/resource/shopperHistory?token={token}");
             if (response.IsSuccessStatusCode)
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
@@ -70,7 +70,7 @@ namespace WooliesChallenge.Service.ApiResources
           {
           
                 var content = new StringContent(payload, Encoding.UTF8, "application/json");
-                var response = await client.PostAsync(@$"api/resource/trolleyCalculator?token={token}", content);
+                var response = await client.PostAsync($@"api/resource/trolleyCalculator?token={token}", content);
 
                 if (response.IsSuccessStatusCode)
                 {

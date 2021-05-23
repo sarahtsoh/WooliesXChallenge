@@ -30,7 +30,7 @@ controller and message statuscode 200 if all sucessful
 Unit testing:
 1.I have used variety of framework to do unit testing
 2.Generally Unit testing is done in NUnit framework, but need to used Moq to mock httpclient and ILogger<> to unit test ApiResourceService
-3.Add integration testing by using Xunit, to create fakeWebhost to test wooliesController
+3.Add integration testing by using Xunit, to create fakeWebhost and injected with ApiResource to test wooliesController URL
 
 The service is deployed to Azure webapp
 https://woolieschallenge20210523164712.azurewebsites.net/index.html   -- for swagger
